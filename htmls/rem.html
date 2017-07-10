@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //16个rem等于一个屏幕的宽度 em是父元素的字体大小 rem是根元素的字体大小
+    var html = document.querySelector('html');
+    var width = document.documentElement.clientWidth / 16;
+    html.style.fontSize = width;
+</script>
+</body>
+</html>

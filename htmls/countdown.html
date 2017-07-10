@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var Countdown = function(timeNum){
+
+    }
+    Countdown.prototype.down = function(){
+        setInterval(function(){
+            timeNum--;
+            init();
+        },1000);
+    }
+    Countdown.prototype.init = function(){
+        this.days = Math.floor(timeNum/1000*3600*24);
+        this.hours = Math.floor((timeNum - this.days*1000*3600*24)/1000*3600);
+        this.minutes = Math.floor((timeNum - this.days*1000*3600*24 - this.hours*1000*3600)/1000*60);
+        this.seconds = Math.floor((timeNum - this.days*1000*3600*24 - this.hours*1000*3600 - this.minutes*1000*60)/1000);
+    };
+    Countdown.prototype.begin = function(){
+        console.log(timeNum)
+        console.log(this.minutes,this.seconds)
+    }
+    Countdown(10000)
+    Countdown.init()
+    Countdown.down()
+    Countdown.begin()
+</script>
+</body>
+</html>

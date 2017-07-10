@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        水平居中 text-align:center;
+        垂直居中
+            单行 line-height
+            多行 双层div
+                 外层 display:table
+                 内层 display:table-cell vertical-align:middle
+        */
+        .test1{
+            width: 900px;
+            height:200px;
+            background-color: #fab;
+            text-align: center;
+            line-height: 300px;
+        }
+        .test2{
+            width: 900px;
+            height: 400px;
+            background-color: #afb;
+            display: table;
+            text-align: center;
+        }
+        .middle{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="test1"><span>不怕工作汗流浃背，不怕生活充满泪水</span></div>
+<div class="test2">
+    <div class="middle">
+        <p>
+            问世间 情为何物<br>
+            直教生死相许<br>
+            天南地北双飞客<br>
+            老翅几回寒暑<br>
+            欢乐趣 离别苦<br>
+            就中更有痴儿女<br>
+            君应有语 渺万里层云 千山暮雪<br>
+            只影向谁去<br>
+        </p>
+    </div>
+</div>
+</body>
+</html>

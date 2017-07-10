@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Person = function(name){
+        this.name = name
+    };
+    Person.prototype.sayName = function(){
+        console.log(this.name);
+    };
+    var wukong = new Person('wukong');
+    wukong.sayName()
+</script>
+</body>
+</html>

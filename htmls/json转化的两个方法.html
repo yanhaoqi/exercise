@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1,'字符串',{
+        name:'yanhaoqi',
+        age:26
+    },[2,3,4,5]];
+    var str = JSON.stringify(arr)
+    console.log(str,typeof str);
+    var newArr = JSON.parse(str)
+    console.log(newArr,newArr instanceof Array)
+</script>
+</body>
+</html>

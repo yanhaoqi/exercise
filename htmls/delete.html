@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //delete只能删除可以通过for in访问的属性，不能删除函数传入的实参
+    (function(x){
+        delete x;
+        console.log(x);
+    })(5)
+
+    var obj = {
+        name:'yanhaoqi',
+        age:26,
+        want:'job'
+    }
+    delete obj.age
+    for(x in obj){
+        console.log(x);
+    }
+</script>
+</body>
+</html>

@@ -9,28 +9,42 @@
             margin-top:20px;
         }
         table{
-
+            width: 500px;
+            height: 300px;
+            border:1px blue solid;
+            border-collapse:collapse;
+            /*border-spacing:10px 20px;*/
+            text-align: center;
+        }
+        th,td{
+            border:1px black solid;
         }
     </style>
 </head>
 <body>
 <!--
 table 表格容器 块元素
-    width height:值为数字单，位默认px。值为百分数，则是相对浏览器视口，若为嵌套表格，则相对所在的单元格的宽度
-    border:容器边框线的宽度，值为数字，单位默认px
-    cellspacing:表格内各个单元格之间（单元格和容器边框）的距离，值为数字，单位默认px
-    cellpadding:单元格内容到单元格边框的距离，值为数字，单位默认px
+    table的行内attribute都废弃了，推荐用css样式，见MDN
+    table的css样式有：
+    border-collapse:separate(默认) collapse 表格内th、td单元格之间（包括单元格和table边框之间）的边框有无距离
+    border-spacing:10px 20px 在上面属性为separate时才有效，第一个值表示单元格之间的距离（包括单元格和table边框之间），第二个值如果设置的haul，可单独改变tr行之间的距离
+caption 表格标题，标签写在table内，内容实际展示在table表框上面自动居中
 tr 行
 th、td 单元格
+    行内attribute:
+    rowspan:一个单元格占几行
+    colspan:一个单元格占几列
 -->
-    <table border="1" width="50%" height="300" cellspacing="5" cellpadding="20">
+    <table>
+        <caption>coding is thinking</caption>
+        <tbody>
         <tr>
             <th>num one</th>
             <th>num two</th>
             <th>num three</th>
         </tr>
         <tr>
-            <td>变量</td>
+            <td rowspan="2">变量</td>
             <td>数据类型</td>
             <td>函数</td>
             <td>递归</td>
@@ -40,6 +54,10 @@ th、td 单元格
             <td>5</td>
             <td>6</td>
         </tr>
+        <tr>
+            <td colspan="3">7</td>
+        </tr>
+        </tbody>
     </table>
     <div class="test" style="width:500px;height:300px;"></div>
 </body>

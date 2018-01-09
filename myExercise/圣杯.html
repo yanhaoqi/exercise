@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .clearfix{
+            zoom:1;
+        }
+        .clearfix:after,.clearfix:before{
+            display:table;
+            content:"";
+            clear:both;
+        }
+        body{
+            min-width:600px;
+        }
+        .header,.footer{
+            background-color: #fab;
+            height:150px;
+            text-align:center;
+            line-height:150px;
+        }
+        .middle{
+            width:100%;
+            background-color: #abf;
+            height:500px;
+        }
+        .left,.right{
+            width:150px;
+            background-color: #afb;
+        }
+        .middle,.left,.right{
+            float:left;
+            padding-bottom:10000px;
+            margin-bottom:-10000px;
+        }
+        .left{
+            margin-left:-100%;
+            position:relative;
+            left:-150px;
+        }
+        .right{
+            margin-left:-150px;
+            position:relative;
+            left:150px;
+        }
+        .content{
+            padding:0 150px;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        HEADER
+    </div>
+    <div class="content clearfix">
+        <div class="middle">
+            MIDDLE
+        </div>
+        <div class="left">
+            LEFT
+        </div>
+        <div class="right">
+            RIGHT
+        </div>
+    </div>
+    <div class="footer">
+        FOOTER
+    </div>
+</body>

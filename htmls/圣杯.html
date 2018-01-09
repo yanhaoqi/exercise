@@ -13,7 +13,7 @@
             left
             right
         footer
-        2.container子元素浮动，middle宽度百分百，剩下两个固定宽度。container自身清除浮动使fooer位置不变。
+        2.container子元素浮动，middle宽度百分百，另外两个设置固定宽度。container自身清除浮动使fooer位置不变。
         3.left margin-left:-100% right:margin-left:-自身宽度，这样是left和right分别到middle的左右两侧，但此时遮挡了middle的内容
         4.给container加左右padding为左右宽度，同时使left和right相对定位向左右移动自身宽度，解决遮盖问题
         5.伪等高布局。left middle right 设置padding-bottom:10000px margin-bottom:10000px 父元素container设置overflow:hidden
